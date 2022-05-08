@@ -1,0 +1,87 @@
+root@deniz-jetson:/jetson-inference/python/training/classification# python3 train.py --model-dir=models/maskdatav2 data/maskdatav2 --batch-size 4 --workers 1 --epochs 10 --lr 0.01 --momentum 0.1
+Use GPU: 0 for training
+=> dataset classes:  2 ['withmask', 'withoutmask']
+=> using pre-trained model 'resnet18'
+=> reshaped ResNet fully-connected layer with: Linear(in_features=512, out_features=2, bias=True)
+/usr/local/lib/python3.6/dist-packages/torch/nn/functional.py:718: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /media/nvidia/NVME/pytorch/pytorch-v1.9.0/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool2d(input, kernel_size, stride, padding, dilation, ceil_mode)
+Epoch: [0][ 0/15]  Time 207.226 (207.226)  Data 13.018 (13.018)  Loss 1.5143e+00 (1.5143e+00)  Acc@1   0.00 (  0.00)  Acc@5 100.00 (100.00)
+Epoch: [0][10/15]  Time  0.539 (22.146)  Data  0.378 ( 2.174)  Loss 1.0723e+00 (1.0306e+00)  Acc@1  25.00 ( 52.27)  Acc@5 100.00 (100.00)
+Epoch: [0] completed, elapsed time 246.482 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  2.314 ( 2.314)  Loss 6.9544e-02 (6.9544e-02)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 100.000 Acc@5 100.000
+saved best model to:  models/maskdatav2/model_best.pth.tar
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Epoch: [1][ 0/15]  Time  3.551 ( 3.551)  Data  3.246 ( 3.246)  Loss 4.8626e-01 (4.8626e-01)  Acc@1  75.00 ( 75.00)  Acc@5 100.00 (100.00)
+Epoch: [1][10/15]  Time  0.506 ( 0.834)  Data  0.344 ( 0.653)  Loss 3.8267e-01 (3.9579e-01)  Acc@1  75.00 ( 75.00)  Acc@5 100.00 (100.00)
+Epoch: [1] completed, elapsed time 11.508 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  1.868 ( 1.868)  Loss 3.6723e-04 (3.6723e-04)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 90.000 Acc@5 100.000
+saved checkpoint to:  models/maskdatav2/checkpoint.pth.tar
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Epoch: [2][ 0/15]  Time  2.482 ( 2.482)  Data  2.228 ( 2.228)  Loss 9.6060e-03 (9.6060e-03)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+Epoch: [2][10/15]  Time  0.731 ( 0.710)  Data  0.560 ( 0.538)  Loss 1.7872e-02 (1.9060e-01)  Acc@1 100.00 ( 90.91)  Acc@5 100.00 (100.00)
+Epoch: [2] completed, elapsed time 10.099 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  0.935 ( 0.935)  Loss 1.3219e-04 (1.3219e-04)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 100.000 Acc@5 100.000
+saved checkpoint to:  models/maskdatav2/checkpoint.pth.tar
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Epoch: [3][ 0/15]  Time  1.275 ( 1.275)  Data  1.039 ( 1.039)  Loss 1.4663e-01 (1.4663e-01)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+Epoch: [3][10/15]  Time  0.532 ( 0.674)  Data  0.371 ( 0.503)  Loss 4.6367e-01 (8.1195e-01)  Acc@1  75.00 ( 72.73)  Acc@5 100.00 (100.00)
+Epoch: [3] completed, elapsed time  9.690 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  1.073 ( 1.073)  Loss 2.6572e-03 (2.6572e-03)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 100.000 Acc@5 100.000
+saved checkpoint to:  models/maskdatav2/checkpoint.pth.tar
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Epoch: [4][ 0/15]  Time  1.478 ( 1.478)  Data  1.210 ( 1.210)  Loss 1.9491e+00 (1.9491e+00)  Acc@1   0.00 (  0.00)  Acc@5 100.00 (100.00)
+Epoch: [4][10/15]  Time  0.540 ( 0.607)  Data  0.374 ( 0.435)  Loss 5.2243e-01 (6.8556e-01)  Acc@1  75.00 ( 70.45)  Acc@5 100.00 (100.00)
+Epoch: [4] completed, elapsed time  8.892 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  0.914 ( 0.914)  Loss 9.2983e-06 (9.2983e-06)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 100.000 Acc@5 100.000
+saved checkpoint to:  models/maskdatav2/checkpoint.pth.tar
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Epoch: [5][ 0/15]  Time  1.437 ( 1.437)  Data  1.174 ( 1.174)  Loss 1.8080e+00 (1.8080e+00)  Acc@1  50.00 ( 50.00)  Acc@5 100.00 (100.00)
+Epoch: [5][10/15]  Time  0.561 ( 0.615)  Data  0.400 ( 0.445)  Loss 4.9597e-02 (3.5187e-01)  Acc@1 100.00 ( 86.36)  Acc@5 100.00 (100.00)
+Epoch: [5] completed, elapsed time  8.982 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  1.079 ( 1.079)  Loss 2.9688e-04 (2.9688e-04)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 100.000 Acc@5 100.000
+saved checkpoint to:  models/maskdatav2/checkpoint.pth.tar
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Epoch: [6][ 0/15]  Time  1.507 ( 1.507)  Data  1.267 ( 1.267)  Loss 5.7209e-02 (5.7209e-02)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+Epoch: [6][10/15]  Time  0.545 ( 0.636)  Data  0.382 ( 0.466)  Loss 3.6247e-04 (1.9241e-01)  Acc@1 100.00 ( 95.45)  Acc@5 100.00 (100.00)
+Epoch: [6] completed, elapsed time  9.262 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  0.917 ( 0.917)  Loss 2.9020e-03 (2.9020e-03)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 100.000 Acc@5 100.000
+saved checkpoint to:  models/maskdatav2/checkpoint.pth.tar
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Epoch: [7][ 0/15]  Time  1.203 ( 1.203)  Data  0.872 ( 0.872)  Loss 8.0184e-01 (8.0184e-01)  Acc@1  75.00 ( 75.00)  Acc@5 100.00 (100.00)
+Epoch: [7][10/15]  Time  0.512 ( 0.621)  Data  0.349 ( 0.441)  Loss 9.3569e-01 (4.3268e-01)  Acc@1  75.00 ( 84.09)  Acc@5 100.00 (100.00)
+Epoch: [7] completed, elapsed time  9.038 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  0.923 ( 0.923)  Loss 2.3275e-05 (2.3275e-05)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 100.000 Acc@5 100.000
+saved checkpoint to:  models/maskdatav2/checkpoint.pth.tar
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Epoch: [8][ 0/15]  Time  1.652 ( 1.652)  Data  1.383 ( 1.383)  Loss 6.9837e-03 (6.9837e-03)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+Epoch: [8][10/15]  Time  0.552 ( 0.628)  Data  0.390 ( 0.457)  Loss 1.2938e-02 (1.8218e-01)  Acc@1 100.00 ( 90.91)  Acc@5 100.00 (100.00)
+Epoch: [8] completed, elapsed time  9.208 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  1.045 ( 1.045)  Loss 1.4664e-03 (1.4664e-03)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 100.000 Acc@5 100.000
+saved checkpoint to:  models/maskdatav2/checkpoint.pth.tar
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Epoch: [9][ 0/15]  Time  1.167 ( 1.167)  Data  0.858 ( 0.858)  Loss 1.4200e-03 (1.4200e-03)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+Epoch: [9][10/15]  Time  0.574 ( 0.605)  Data  0.414 ( 0.425)  Loss 1.1617e-02 (2.9188e-01)  Acc@1 100.00 ( 88.64)  Acc@5 100.00 (100.00)
+Epoch: [9] completed, elapsed time  8.900 seconds
+[W pthreadpool-cpp.cc:90] Warning: Leaking Caffe2 thread-pool after fork. (function pthreadpool)
+Test: [0/5]  Time  1.090 ( 1.090)  Loss 3.3526e-03 (3.3526e-03)  Acc@1 100.00 (100.00)  Acc@5 100.00 (100.00)
+ * Acc@1 95.000 Acc@5 100.000
+saved checkpoint to:  models/maskdatav2/checkpoint.pth.tar
+root@deniz-jetson:/jetson-inference/python/training/classification#
